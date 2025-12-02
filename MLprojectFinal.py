@@ -136,10 +136,11 @@ for ax, (name, model) in zip(axes, models.items()):
     y_pred = model.predict(X_test)
     cm = confusion_matrix(y_test, y_pred)
 
-    sns.heatmap(cm, annot=True, fmt="d", ax=ax)
-    ax.set_title(name)
-    ax.set_xlabel("Predicted")
-    ax.set_ylabel("Actual")
+  import numpy as np
+# ...
+# Around line 139:
+cm_array = np.asarray(cm) # Explicitly convert 'cm' to a NumPy array
+sns.heatmap(cm_array, annot=True, fmt='d', ax=ax)
 
 plt.tight_layout()
 st.pyplot(fig)
