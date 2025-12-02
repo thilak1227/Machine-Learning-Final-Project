@@ -136,7 +136,6 @@ for ax, (name, model) in zip(axes, models.items()):
     y_pred = model.predict(X_test)
     cm = confusion_matrix(y_test, y_pred)
 
-  import numpy as np
 # ...
 # Around line 139:
 cm_array = np.asarray(cm) # Explicitly convert 'cm' to a NumPy array
