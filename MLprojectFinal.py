@@ -147,7 +147,7 @@ if st.button("PREDICT KIDNEY DISEASE STATUS"):
     prediction_proba = model.predict_proba(scaled_data)
     
     # Class 1 is 'ckd' (Chronic Kidney Disease) based on your model's classification encoding
-    positive_proba = prediction_proba[0][1]
+    positive_proba = float(prediction_proba[0][1])
 
     st.markdown("---")
     st.subheader("Prediction Result")
