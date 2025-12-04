@@ -166,4 +166,4 @@ if st.button("PREDICT KIDNEY DISEASE STATUS"):
         st.metric("Confidence Score", f"{positive_proba:.2%}")
 
 st.markdown("---")
-st.caption("Model used: XGBoost Classifier. **Disclaimer: This is a predictive tool and should not replace professional medical advice.**")
+st.caption("Model used: Decision tree. **Disclaimer: This is a predictive tool and should not replace professional medical advice.**")
