@@ -83,7 +83,7 @@ Four machine learning classification algorithms were trained and their performan
 * **Logistic Regression**
 * **K-Nearest Neighbors (KNN)**
 * **Decision Tree**
-* **Random Forest** (Note: Your best-performing model, **XGBoost**, should be mentioned here if it was used in the final comparison.)
+* **Random Forest** 
 
 > **Goal:** The primary objective was to achieve a predictive accuracy of **80–85% or higher** on the test dataset.
 
@@ -98,7 +98,7 @@ Each model was assessed using a comprehensive set of metrics to determine its ov
 ---
 
 ## 6. Deployment
-The best-performing model (the **XGBoost Classifier**) was saved and deployed to create an accessible end-user tool:
+The best-performing model (the **Random Forest**) was saved and deployed to create an accessible end-user tool:
 
 * The final trained model and the fitted data scaler were saved using the Python `pickle` library.
 * The model was deployed as an interactive web application using **Streamlit**, allowing users to enter patient clinical data and receive an instant CKD risk prediction.
@@ -129,12 +129,10 @@ https://machine-learning-final-project-kideny.streamlit.app/
 
 # Model Evaluation
 
-| Model                | Accuracy | F1 Score | ROC-AUC |
-|-----------------------|----------|----------|---------|
-| Logistic Regression   | 0.917    | 0.902    | 0.953   |
-| Random Forest         | 0.883    | 0.863    | 0.945   |
-| SVM                   | 0.900    | 0.880    | 0.940   |
-| XGBoost               | 0.850    | 0.830    | 0.944   |
+=== Final Model Comparison ===
+                     Train Accuracy  Test Accuracy  CV Mean Accuracy  \
+Tuned Decision Tree          0.9875         0.9625            0.9625   
+Tuned Random Forest          0.9906         0.9750            0.9906  
 
 
 # Acknowledgement
